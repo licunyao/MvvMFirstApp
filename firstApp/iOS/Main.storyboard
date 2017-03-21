@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="xnT-qm-PFN">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip View-->
+        <scene sceneID="D8T-Ng-ciX">
+            <objects>
+                <viewController storyboardIdentifier="TipView" id="xnT-qm-PFN" customClass="TipView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o3D-AC-KWr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0MX-RX-uSu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aJR-nX-lP7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip计算结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-Mq-BWL">
+                                <rect key="frame" x="66" y="70" width="188" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="zun-8T-gxq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SubTotal" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-Lz-rbZ">
+                                <rect key="frame" x="66" y="200" width="188" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AwH-an-WH0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HKQ-MD-gGI">
+                                <rect key="frame" x="64" y="324" width="192" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mfb-Mq-BWL" secondAttribute="trailing" constant="50" id="8Vn-TE-XtM"/>
+                            <constraint firstItem="w1D-Lz-rbZ" firstAttribute="leading" secondItem="mfb-Mq-BWL" secondAttribute="leading" id="8wU-ZF-UUj"/>
+                            <constraint firstItem="HKQ-MD-gGI" firstAttribute="top" secondItem="w1D-Lz-rbZ" secondAttribute="bottom" constant="44" id="Awi-rY-PfA"/>
+                            <constraint firstItem="w1D-Lz-rbZ" firstAttribute="centerX" secondItem="mfb-Mq-BWL" secondAttribute="centerX" id="P3m-SD-Bz1"/>
+                            <constraint firstItem="mfb-Mq-BWL" firstAttribute="top" secondItem="o3D-AC-KWr" secondAttribute="bottom" constant="50" id="Vke-KU-qsR"/>
+                            <constraint firstItem="HKQ-MD-gGI" firstAttribute="trailing" secondItem="w1D-Lz-rbZ" secondAttribute="trailing" id="fHM-9m-CRV"/>
+                            <constraint firstItem="mfb-Mq-BWL" firstAttribute="leading" secondItem="aJR-nX-lP7" secondAttribute="leadingMargin" constant="50" id="jGG-Vc-p9A"/>
+                            <constraint firstItem="w1D-Lz-rbZ" firstAttribute="top" secondItem="mfb-Mq-BWL" secondAttribute="bottom" constant="50" id="mWR-7A-wA8"/>
+                            <constraint firstItem="HKQ-MD-gGI" firstAttribute="leading" secondItem="w1D-Lz-rbZ" secondAttribute="leading" id="ns2-fr-s3t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generisitySliderBar" destination="HKQ-MD-gGI" id="L43-PA-KlJ"/>
+                        <outlet property="textFieldOne" destination="w1D-Lz-rbZ" id="xfL-yO-fJR"/>
+                        <outlet property="titleLabel" destination="mfb-Mq-BWL" id="Vpu-iT-Zee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9aU-B5-TYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.375" y="15.563333333333333"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
